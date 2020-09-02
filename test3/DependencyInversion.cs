@@ -16,7 +16,11 @@ class Dip : IPrinciple
 	}
 	internal class Customer
 	{
-		IFileLogger logger = new FileLogger();
+		IFileLogger _logger;
+        public Customer(IFileLogger logger)
+        {
+            this._logger = logger;
+        }
 		public void Add(Database db)
 		{
 			try
@@ -25,7 +29,7 @@ class Dip : IPrinciple
 			}
 			catch (Exception error)
 			{
-				logger.Handle(error.ToString());
+				_logger.Handle(error.ToString());
 			}
 		}
 	}
