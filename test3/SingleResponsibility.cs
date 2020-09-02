@@ -37,7 +37,7 @@ namespace Solid.SingleResponsibility
 			}
 			catch (Exception ex)
             {
-				FileIO.Write
+				// Error management
             }
         }
     }
