@@ -1,10 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿//I in SOLID
 
-namespace test3
+
+class Isp : IPrinciple
 {
-    class InterfaceSegregation
-    {
-    }
+	public string Principle()
+	{
+		return "Interface Segregation";
+	}
+
+
+	// If we want to add more functionality, don't add to existing
+	// interfaces, segregate them out.
+	interface ICustomer // existing
+	{
+		void Add();
+	}
+
+	interface ICustomerImproved : ICustomer
+	{
+		void Read();
+	}
 }
