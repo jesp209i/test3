@@ -7,7 +7,7 @@ class Dip : IPrinciple
 		return "Dependency Inversion";
 	}
 
-	internal class FileLogger : IFileLogger
+	internal class FileLogger : ILogger
 	{
 		public void Handle(string error)
 		{
@@ -16,8 +16,8 @@ class Dip : IPrinciple
 	}
 	internal class Customer
 	{
-		IFileLogger _logger;
-        public Customer(IFileLogger logger)
+		ILogger _logger;
+        public Customer(ILogger logger)
         {
             this._logger = logger;
         }
@@ -33,7 +33,7 @@ class Dip : IPrinciple
 			}
 		}
 	}
-	public interface IFileLogger
+	public interface ILogger
     {
 		void Handle(string error);
     }
