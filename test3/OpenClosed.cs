@@ -11,7 +11,7 @@ namespace Solid.OpenClosed
 			return "Open for Extension, Closed for Modification";
 		}
 	}
-	internal class Customer
+	internal abstract class Customer
 	{
 		public int Type;
 
@@ -26,9 +26,13 @@ namespace Solid.OpenClosed
 		public override void Add(Database db)
 		{
 			// new cutomer logic
-			base.Add(db);
+			db.Add();
 		}
 	}
+	internal class OtherCustomer : Customer
+    {
+
+    }
 	internal class ExistingCustomer : Customer
 	{
 		public override void Add(Database db)
