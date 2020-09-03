@@ -1,6 +1,7 @@
 ﻿//L i SOLID
 
-using test3;
+using System.Collections.Generic;
+using test3.Stuff;
 
 namespace Solid.Liskov
 {
@@ -16,12 +17,16 @@ namespace Solid.Liskov
 			{
 				return this.BaseDiscount - (sales * 5);
 			}
-			// This method doesnt follow the LSP because it is expected to add to db.
 
-			//public override void Add(Database db)
-			//{
-			//	throw new Exception("Not allowed");
-			//}
+			/*** 
+             * This method doesnt follow LSP because it is expected to be able to add to db.
+			 ***
+			
+            public override void Add(Database db)
+            {
+                throw new Exception("Not allowed");
+            }
+			*/
 		}
 		public class GoldCustomer : Customer
 		{
@@ -58,3 +63,5 @@ namespace Solid.Liskov
 				}
 			}
 		}
+	}
+}

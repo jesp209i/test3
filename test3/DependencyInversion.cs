@@ -1,5 +1,9 @@
 ﻿//D IN SOLID
 
+using System;
+using System.IO;
+using test3.Stuff;
+
 class Dip : IPrinciple
 {
 	public string Principle()

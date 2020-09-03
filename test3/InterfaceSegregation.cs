@@ -1,6 +1,8 @@
 ﻿//I in SOLID
 
 
+using test3.Stuff;
+
 class Isp : IPrinciple
 {
 	public string Principle()
@@ -8,16 +10,14 @@ class Isp : IPrinciple
 		return "Interface Segregation";
 	}
 
-
-	// If we want to add more functionality, don't add to existing
-	// interfaces, segregate them out.
-	interface ICustomer // existing
+	interface ICustomer
 	{
 		void Add();
 	}
 
 	interface ICustomerImproved : ICustomer
 	{
+		// 'void Add()' was removed from this interface, and instead inherited from ICustomer
 		void Read();
 	}
 }

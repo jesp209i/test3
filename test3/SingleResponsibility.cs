@@ -2,7 +2,7 @@
 
 using System;
 using System.IO;
-using test3;
+using test3.Stuff;
 
 namespace Solid.SingleResponsibility
 {
@@ -37,7 +37,7 @@ namespace Solid.SingleResponsibility
 			}
 			catch (Exception ex)
             {
-				// Error management
+				// Log Error
             }
         }
     }

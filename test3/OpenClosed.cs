@@ -1,6 +1,6 @@
 ﻿// Hvad er der galt her iht. O i SOLID?
 
-using test3;
+using test3.Stuff;
 
 namespace Solid.OpenClosed
 {
@@ -31,7 +31,7 @@ namespace Solid.OpenClosed
 	}
 	internal class OtherCustomer : Customer
     {
-
+		// uses method from abstract class
     }
 	internal class ExistingCustomer : Customer
 	{
